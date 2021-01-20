@@ -11,8 +11,9 @@
     - Gulp
     - Git
 5.  Some code:
-    ```function boolToWord( bool ){
-         return (bool === true ? "Yes" : "No");
+    ```
+    function boolToWord( bool ){
+      return (bool === true ? "Yes" : "No");
     }
     ```
 6. RS-Schhol

@@ -5,8 +5,6 @@
 }
 
 body {
-  margin-bottom: 1rem;
-
   min-width: 100vw;
   min-height: 100vh;
  
@@ -59,9 +57,49 @@ body {
 /*****************************MAIN: ABOUT**************************/
 
 .about {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-areas: 
+    "about experience"
+    "education languages"
+    "works technical"
+    "reference contacts";
   justify-content: space-between;
+
+  border-bottom: 2px solid #000;
+
+  margin-bottom: 10px;
+}
+
+.about__me {
+  grid-area: about;
+}
+
+.about__experience {
+  grid-area: experience;
+}
+
+.about__education {
+  grid-area: education;
+}
+
+.about__languages {
+  grid-area: languages;
+}
+
+.about__work {
+  grid-area: works;
+}
+
+.about__skills {
+  grid-area: technical;
+}
+
+.about__reference {
+  grid-area: reference;
+}
+
+.about__contacts {
+  grid-area: contacts;
 }
 
 .about__h {
@@ -107,6 +145,8 @@ body {
 .reference-list {
   display: flex;
   flex-flow: wrap row;
+
+  margin-bottom: 20px;
 }
 
 .reference-list__item {
@@ -130,4 +170,46 @@ body {
 .reference-list__item a {
   width: 100%;
   height: 100%;
+}
+
+/******************FOOTER****************************/
+
+.footer {
+  display: flex;
+}
+
+.footer-list {
+  display: flex;
+  flex-flow: row wrap;
+  
+  margin: 0 auto;
+}
+
+.rs-school {
+  width: 50px;
+  height: 50px;
+}
+
+.list-items {
+  list-style-type: none;
+}
+
+.year {
+  list-style-type: none;
+
+  margin-right: 40px;
+
+  align-self: center;
+}
+
+.git {
+  list-style-type: none;
+
+  margin: 0 40px
+}
+
+.list-items a img,
+.git a img {
+  width: 40px;
+  height: 40px;
 }
